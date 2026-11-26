@@ -16,7 +16,7 @@ void main()
     float mixFogStrength = smoothstep(4.0, 15.0, vDistanceToCamera);
     vec3 fogColor = uFogColor;
 
-    vec3 mixedFogWaveColor = mix(color, fogColor, mixFogStrength * 0.75);
+    vec3 mixedFogWaveColor = mix(color, fogColor, mixFogStrength);
 
     gl_FragColor = vec4(mixedFogWaveColor, 1.0);
     // gl_FragColor = vec4(vec3(mixFogStrength), 1.0);
